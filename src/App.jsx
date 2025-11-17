@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials'
 import Integrations from './components/Integrations'
 import FAQ from './components/FAQ'
 import ChatButton from './components/ChatButton'
+import Demo from './components/Demo'
 
 const STRINGS = {
   en: {
@@ -61,6 +62,27 @@ const STRINGS = {
     testimonials: 'What customers say',
     integrations: 'Works with your stack',
     faq: 'Frequently asked questions',
+    demo: {
+      title: 'Try the AI receptionist',
+      subtitle: 'Chat with a live demo of Cliqo. Ask about scheduling, pricing, or integrations — in English or French.',
+      send: 'Send',
+      typing: 'Cliqo is typing…',
+      error: 'The demo is unavailable right now. Please try again later.',
+      capabilitiesTitle: 'What Cliqo can do',
+      capabilities: [
+        'Schedule and manage appointments',
+        'Route queries to the right person',
+        'Answer pricing and product questions',
+        'Work bilingually (EN/FR)'
+      ],
+      promptsTitle: 'Try asking…',
+      prompts: [
+        'Can you book me for Friday at 2pm?',
+        'What integrations do you support?',
+        'How much does it cost?',
+        'Switch to French please'
+      ]
+    },
     footer: {
       tagline: 'Human-grade conversations. Enterprise reliability.'
     }
@@ -115,6 +137,27 @@ const STRINGS = {
     testimonials: 'Ce que disent nos clients',
     integrations: 'Compatible avec votre stack',
     faq: 'Questions fréquentes',
+    demo: {
+      title: 'Essayez la réceptionniste IA',
+      subtitle: 'Discutez avec une démo de Cliqo. Parlez planification, tarifs ou intégrations — en anglais ou en français.',
+      send: 'Envoyer',
+      typing: 'Cliqo écrit…',
+      error: 'La démo est momentanément indisponible. Réessayez plus tard.',
+      capabilitiesTitle: 'Ce que Cliqo peut faire',
+      capabilities: [
+        'Planifier et gérer des rendez‑vous',
+        'Acheminer les demandes vers la bonne personne',
+        'Répondre aux questions de prix et de produit',
+        'Travailler en bilingue (FR/EN)'
+      ],
+      promptsTitle: 'Essayez de demander…',
+      prompts: [
+        'Pouvez‑vous me réserver vendredi à 14 h ?',
+        'Quelles intégrations supportez‑vous ?',
+        'Combien ça coûte ?',
+        'Passe en anglais s’il te plaît'
+      ]
+    },
     footer: {
       tagline: 'Des conversations naturelles. Une fiabilité d’entreprise.'
     }
@@ -140,6 +183,7 @@ export default function App() {
         <Hero t={t} />
         <Stats />
         <Features t={t} />
+        <Demo lang={lang} t={t} />
         <Testimonials title={t.testimonials} />
         <Integrations title={t.integrations} />
         <Pricing t={t} />
