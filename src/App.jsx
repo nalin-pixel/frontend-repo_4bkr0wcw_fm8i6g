@@ -4,6 +4,11 @@ import Hero from './components/Hero'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
+import Stats from './components/Stats'
+import Testimonials from './components/Testimonials'
+import Integrations from './components/Integrations'
+import FAQ from './components/FAQ'
+import ChatButton from './components/ChatButton'
 
 const STRINGS = {
   en: {
@@ -53,6 +58,9 @@ const STRINGS = {
       message: 'What would you like to accomplish with Cliqo?',
       submit: 'Request demo'
     },
+    testimonials: 'What customers say',
+    integrations: 'Works with your stack',
+    faq: 'Frequently asked questions',
     footer: {
       tagline: 'Human-grade conversations. Enterprise reliability.'
     }
@@ -104,6 +112,9 @@ const STRINGS = {
       message: 'Que souhaitez-vous accomplir avec Cliqo ?',
       submit: 'Demander une démo'
     },
+    testimonials: 'Ce que disent nos clients',
+    integrations: 'Compatible avec votre stack',
+    faq: 'Questions fréquentes',
     footer: {
       tagline: 'Des conversations naturelles. Une fiabilité d’entreprise.'
     }
@@ -127,10 +138,16 @@ export default function App() {
 
       <main className="pt-24">
         <Hero t={t} />
+        <Stats />
         <Features t={t} />
+        <Testimonials title={t.testimonials} />
+        <Integrations title={t.integrations} />
         <Pricing t={t} />
+        <FAQ title={t.faq} />
         <CTA t={t} />
       </main>
+
+      <ChatButton />
 
       <footer className="relative border-t border-white/10 mt-16">
         <div className="mx-auto max-w-6xl px-6 py-10 flex items-center justify-between">
